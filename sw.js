@@ -1,4 +1,4 @@
-const V="atico-v1";
+const V="FEET";
 const BASE=["./","index.html","manifest.json","icon-192.png","icon-512.png","logo.png"];
 self.addEventListener("install",e=>{
   e.waitUntil(caches.open(V).then(c=>Promise.all(BASE.map(u=>c.add(u).catch(()=>{})))).then(()=>self.skipWaiting()));
